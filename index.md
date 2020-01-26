@@ -23,5 +23,6 @@
 ![realcrowd3](https://devinnarula.github.io/Puddle-iOS-Application/realcrowd3.png)
 
 ## Development information:
-### This project was made by Gage Gailbreath, Devin Naurla, Shreya Thammana, and Forrest Zach.
+### This project was made by Gage Gailbreath, Devin Naurla, Shreya Thammana, and Forrest Zach for the 2020 CUHackIt hackathon.
 
+![cuhackit](https://devinnarula.github.io/Puddle-iOS-Application/cuhackit.png)

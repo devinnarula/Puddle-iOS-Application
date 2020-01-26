@@ -5,6 +5,7 @@ import json
 import requests
 from datetime import datetime
 import os
+import tornado.tcpserver
 
 access_token = "prj_test_sk_54ed50a4e9e77cde4b4708250e916a3ce27de10b"
 access_token_2 = "prj_live_sk_1a4edf50f41968460a79e7de135e3e45ed83d018"
@@ -58,13 +59,13 @@ def date_clean(data):
 
 class TodoItems(RequestHandler):
     def get(self):
-        date_clean(pull_geospace())
+        # date_clean(pull_geospace())
         pull_geospace()
         self.write(tornado.escape.json_encode(clean_geo(pull_geospace())))
     def post(self):
         message = tornado.escape.json_decode(self.request.body)
         upload_polygon(message)
-        date_clean(pull_geospace())
+        # date_clean(pull_geospace())
         self.write(tornado.escape.json_encode(clean_geo(pull_geospace())))
 
 def make_app():
@@ -76,4 +77,6 @@ def make_app():
 if __name__ == '__main__':
     app = make_app()
     app.listen(3000)
+    # server = tornado.tcpserver.HTTPServer(app)
+    # server.listen(3000)
     IOLoop.instance().start()

@@ -1,6 +1,5 @@
 import requests
 import os
-from datetime import datetime, timedelta
 import json
 import boto3
 geospaces = {}
@@ -34,8 +33,8 @@ def pull_geospace():
     return get_json('https://api.radar.io/v1/geofences',{})
 def upload_polygon(parameters): #Parameters in [name,tag,coordinates] strings Coordinates in [[],[],...]
     current = datetime.now()
-    name = parameters[0]
-    tag = parameters[1]
+    name = str(parameters[0])
+    tag = str(parameters[1])
     coordinates = str(parameters[2])
     payload = {'description' : name, 'type' : 'polygon', 'coordinates' : coordinates, 'tag' : tag, 'externalId' : current.strftime("%H%M%S")}
     server_output = str(post_json('https://api.radar.io/v1/geofences',payload))
@@ -43,4 +42,4 @@ def upload_polygon(parameters): #Parameters in [name,tag,coordinates] strings Co
     s3.Object('puddlebucket', 'newfile.txt').put(Body=server_output)
     global geospaces
     geospaces = pull_geospace() #send geospaces back to client after this
-upload_polygon(['nope','geat',[[-82.84807573583119, 34.68216965456513], [-82.8367726354168, 34.68140454618486], [-82.83029241843683, 34.67935767062518], [-82.83140821738702, 34.67381673639106], [-82.84565611167413, 34.6761813842436], [-82.84807573583119, 34.68216965456513]]])
+# upload_polygon(['nope','geat',[[-82.84807573583119, 34.68216965456513], [-82.8367726354168, 34.68140454618486], [-82.83029241843683, 34.67935767062518], [-82.83140821738702, 34.67381673639106], [-82.84565611167413, 34.6761813842436], [-82.84807573583119, 34.68216965456513]]])

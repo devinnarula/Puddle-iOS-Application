@@ -1,0 +1,8 @@
+import boto3
+import json
+import georeq
+import aws-xray-sdk
+print('Starting Function')
+def handler(event, context):
+    data = [event['name']],event['tag'],event['coordinates']]
+    georeq.upload_polygon(data)

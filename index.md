@@ -10,13 +10,13 @@
 
 # Never step into a puddle again!
 
-![realPuddle](https://devinnarula.github.io/Puddle-iOS-Application/realpuddle.png)
+![realPuddle2](https://devinnarula.github.io/Puddle-iOS-Application/realpuddle2.png)
 
 # With this app, never again will you run into a construction fence!
 
-![realcons](https://devinnarula.github.io/Puddle-iOS-Application/realcons.png)
+![realcons2](https://devinnarula.github.io/Puddle-iOS-Application/realcons2.png)
 
 # Get to class faster by avoiding where it's crowded!
 
-![realcrowd](https://devinnarula.github.io/Puddle-iOS-Application/realcrowd.png)
+![realcrowd2](https://devinnarula.github.io/Puddle-iOS-Application/realcrowd2.png)
 

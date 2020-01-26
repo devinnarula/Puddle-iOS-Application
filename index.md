@@ -18,7 +18,7 @@
 
 ![realcons3](https://devinnarula.github.io/Puddle-iOS-Application/realcons3.png) 
 
-# Get to class faster by avoiding where it's crowded!
+# Get to class faster by avoiding crowded places!
 
 ![realcrowd3](https://devinnarula.github.io/Puddle-iOS-Application/realcrowd3.png)
 

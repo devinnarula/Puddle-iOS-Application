@@ -1,0 +1,6 @@
+framework module Pods_puddle2Tests {
+  umbrella header "Pods-puddle2Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

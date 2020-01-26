@@ -1,4 +1,4 @@
-# Puddle
+# Meet Puddle!
 
 ![logo1](https://devinnarula.github.io/Puddle-iOS-Application/logo1.png)
 
@@ -21,4 +21,7 @@
 # Get to class faster by avoiding where it's crowded!
 
 ![realcrowd3](https://devinnarula.github.io/Puddle-iOS-Application/realcrowd3.png)
+
+## Development information:
+### This project was made by Gage Gailbreath, Devin Naurla, Shreya Thammana, and Forrest Zach.
 

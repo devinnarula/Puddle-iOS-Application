@@ -12,21 +12,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     private var currentLocation: CLLocation?
     //var userLocation = CLLocation()
     
-    func request(){
+    func request(type: String, Latitude: Double, Longitude: Double){
         let session = URLSession.shared
-        let url = URL(string: "https://example.com/post")!
+        let url = URL(string: "http://3.84.41.73:3000/")!
 
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("Powered by Swift!", forHTTPHeaderField: "X-Powered-By")
         let json = [
-            "username": "zaphod42",
-            "message": "So long, thanks for all the fish!"
-        ]
+            "name": 1,
+            "tag": type,
+            "coordinates": [Longitude, Latitude]
+            ] as [String : Any]
         let jsonData = try! JSONSerialization.data(withJSONObject: json, options: [])
         let task = session.uploadTask(with: request, from: jsonData) { data, response, error in
-            // Do something...
+            if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                print(dataString)
+//                for (name, tag, coordinates) in data {
+//                    print("\(airportCode): \(airportName)")
+//                }
+            }
         }
 
         task.resume()
@@ -111,6 +117,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             puddle.title = "Hello World"
             puddle.icon = UIImage(named: "puddle.png")
             puddle.map = mapView
+            
+            request(type: "PUDDLE", Latitude: currentLocation!.coordinate.latitude, Longitude: currentLocation!.coordinate.longitude)
     }
     
     @objc func constructionButtonAction(sender: UIButton!) {
@@ -124,6 +132,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         construction.title = "Hello World"
         construction.icon = UIImage(named: "construction.png")
         construction.map = mapView
+        
+        request(type: "CONSTRUCTION", Latitude: currentLocation!.coordinate.latitude, Longitude: currentLocation!.coordinate.longitude)
     }
     
     @objc func crowdsButtonAction(sender: UIButton!) {
@@ -137,6 +147,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         crowds.title = "Hello World"
         crowds.icon = UIImage(named: "crowds.png")
         crowds.map = mapView
+        
+        request(type: "CROWDS", Latitude: currentLocation!.coordinate.latitude, Longitude: currentLocation!.coordinate.longitude)
     }
     
     override func didReceiveMemoryWarning() {

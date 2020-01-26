@@ -1,4 +1,4 @@
-# Meet Puddle!
+# **Meet Puddle!**
 
 ![logo1](https://devinnarula.github.io/Puddle-iOS-Application/logo1.png)
 

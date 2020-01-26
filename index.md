@@ -1,4 +1,4 @@
-<center>Centered text</center> # Puddle
+# Puddle
 
 ### Have you ever wanted to know more about your college campus?
 

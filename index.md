@@ -25,6 +25,6 @@
 # Use puddle to help you and others at your school! 
 
 ## Development information:
-### This project was made by Gage Gailbreath, Devin Naurla, Shreya Thammana, and Forrest Zach for the 2020 CUHackIt hackathon.
+### This project was made by Gage Gailbreath, Devin Narula, Shreya Thammana, and Forrest Zach for the 2020 CUHackIt hackathon.
 
 ![cuhackit](https://devinnarula.github.io/Puddle-iOS-Application/cuhackit.png)
